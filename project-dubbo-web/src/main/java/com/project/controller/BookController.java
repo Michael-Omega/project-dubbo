@@ -1,6 +1,6 @@
 package com.project.controller;
 
-import com.project.api.Api;
+import com.project.api.BookApi;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date 2021/1/19 16:25
  */
 @RestController
-public class ApiController {
+public class BookController {
 
     @DubboReference
-    private Api api;
+    private BookApi bookApi;
 
 
     @RequestMapping("/get")
     public void get(){
-        api.get();
+        bookApi.get();
     }
 
 }

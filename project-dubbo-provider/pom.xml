@@ -19,6 +19,9 @@
 		<java.version>1.8</java.version>
 		<dubbo.version>2.7.8</dubbo.version>
 		<spring-boot.version>2.4.2</spring-boot.version>
+		<tk.spring.mybatis>2.1.5</tk.spring.mybatis>
+		<tk.mybatis>4.1.5</tk.mybatis>
+		<nacos.version>1.4.1</nacos.version>
 	</properties>
 
 	<dependencies>
@@ -26,6 +29,43 @@
 			<groupId>com.project</groupId>
 			<artifactId>project-dubbo-api</artifactId>
 			<version>${project.parent.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.project</groupId>
+			<artifactId>project-dubbo-domain</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+
+		<!--分页插件-->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>5.2.0</version>
+		</dependency>
+
+		<!--druid连接池-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.2.4</version>
+		</dependency>
+
+		<!--tk.mybatis-->
+		<dependency>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper-spring-boot-starter</artifactId>
+			<version>${tk.spring.mybatis}</version>
+		</dependency>
+		<dependency>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper</artifactId>
+			<version>${tk.mybatis}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.23</version>
 		</dependency>
 
 		<dependency>
@@ -41,18 +81,11 @@
 		</dependency>
 		<!-- Nacos依赖 -->
 		<dependency>
-			<groupId>org.apache.dubbo</groupId>
-			<artifactId>dubbo-registry-nacos</artifactId>
-			<version>${dubbo.version}</version>
+			<groupId>com.alibaba.nacos</groupId>
+			<artifactId>nacos-client</artifactId>
+			<version>${nacos.version}</version>
 		</dependency>
 
-<!--
-		<dependency>
-			<groupId>com.alibaba.boot</groupId>
-			<artifactId>nacos-config-spring-boot-starter</artifactId>
-			<version>0.2.7</version>
-		</dependency>
--->
 
 	</dependencies>
 

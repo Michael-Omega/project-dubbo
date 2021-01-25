@@ -6,7 +6,7 @@ package com.project.api;
  * @Description TODO
  * @Date 2021/1/19 15:02
  */
-public interface Api {
+public interface BookApi {
 
     void get();
 }
